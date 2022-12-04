@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='config.js'></script>
+    <script src="./dist/main.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/565937e97d.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body class="center">
+    <div class="body-wrapper">
+        <div class="search-card center">
+            <h1>Find the current weather of a city</h1>
+                <div class="input-field">
+                        <label for="search-bar">Search a city</label>
+                        <input type="text" id="search-bar">
+                        <span></span>
+                </div>
+                <div class="input-field">
+                    <div>
+                        <input type="radio" id="imperial-unit" name="unit" value="imperial" checked>
+                        <label for="imperial-unit">Imperial</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="metric-unit" name="unit" value="metric">
+                        <label for="metric-unit">Metric</label>
+                    </div>
+                </div>
+        
+                <button id="search-btn">Search</button>
+        </div>
+        <div class="weather-info-wrapper">
+        </div>
+    </div>
+
+</body>
+</html>

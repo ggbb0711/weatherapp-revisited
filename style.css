@@ -1,0 +1,144 @@
+*{
+    list-style: none;
+    color: azure;
+}
+
+ul{
+    margin-left: 0px !important;
+}
+
+input,button,label{
+    cursor: pointer;
+}
+
+
+body{
+    min-height: 100vh;
+    background-image: url('./background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-card>h1{
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+#search-bar{
+    color: black;
+}
+
+#search-bar+span{
+    color: red;
+}
+
+#search-btn{
+    border: 2px rgb(255, 102, 0) solid ;
+    color: rgb(255, 102, 0);
+    border-radius: 4px;
+    align-self: flex-start;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition-duration: 0.2s;
+}
+
+#search-btn:hover{
+    background-color: rgb(255, 102, 0);
+    color: white;
+}
+
+.weather-info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-weather-info{
+    justify-self: center;
+    align-self: center;
+}
+
+.main-weather-info>h1{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.main-weather-info>img{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.main-weather-info>h2{
+    font-size: 2em;
+    text-align: center;
+}
+
+.side-weather-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+.side-weather-info>div{
+    height: 150px;
+    justify-self: center;
+    align-self: center;
+}
+
+.body-wrapper{
+    height: 100%;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgba(0, 0, 0, 0.493);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 800px){
+    .body-wrapper{
+        grid-template-columns: none;
+        grid-template-rows: 450px 1fr;
+    }
+
+    .search-card>h1{
+        align-self: center;
+        margin-left: 0;
+    }
+    
+    .input-field{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-left: 0;
+    }
+    
+    #search-btn{
+        align-self: center;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .side-weather-info{
+        grid-template-columns: none;
+        grid-template-rows: repeat(3,1fr);
+    }
+}
